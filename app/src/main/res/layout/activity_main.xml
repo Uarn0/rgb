@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/rgb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_an_rgb_color"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tag_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/rgb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Red_channel"
+        style="@style/text_input_greeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/red_channel"
+        app:layout_constraintTop_toBottomOf="@+id/tag_description">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Red_channelEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="2"
+            android:digits="0123456789ABCDEF"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Green_channel"
+        style="@style/text_input_greeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/green_channel"
+        app:layout_constraintTop_toBottomOf="@id/Red_channel">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Green_channelEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="2"
+            android:digits="0123456789ABCDEF"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Blue_channel"
+        style="@style/text_input_greeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/blue_channel"
+        app:layout_constraintTop_toBottomOf="@id/Green_channel">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Blue_channelEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="2"
+            android:digits="0123456789ABCDEF"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/textButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_rgb"
+        app:layout_constraintTop_toBottomOf="@+id/Blue_channel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/YourColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/your_color"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textButton"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RGB</string>
+    <string name="create_an_rgb_color">Create an RGB color!</string>
+    <string name="red_channel">Red Channel</string>
+    <string name="last_name_text">last_name_text</string>
+    <string name="description">description</string>
+    <string name="green_channel">Green Channel</string>
+    <string name="blue_channel">Blue Channel</string>
+    <string name="create_rgb">Create RGB</string>
+    <string name="your_color">Your color</string>
+</resources>
